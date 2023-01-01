@@ -4,4 +4,4 @@ liste: select ve enum olarak paylaşıldı.
 
 Enum olarak University.cs den 
 
-<select></select> olarak Home => Index den ulaşabilirsiniz 
+select olarak Home => Index den ulaşabilirsiniz 
