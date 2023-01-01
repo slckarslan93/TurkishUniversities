@@ -1,0 +1,240 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<div class="text-center">
+    <form asp-action="BootCampApplication" asp-controller="Application" method="post" class="container mt-3 mb-3 font-nunito justify-content-center">
+        <input type="hidden" name="id" value="@ViewBag.BootCampId" />
+        <div class="container-fluid col-12 border border rounded text-white" style="background-color:#252629;">
+            <div class="row">
+                <div class="col-12 mt-4 mb-4 font-nunito ">
+                    <h3 style="text-align:center">Türkiye Üniversite Listesi</h3>
+                </div>
+                <div class="form-group col-6 ">
+                    <label>Okul Select</label>
+                    <select class="form-control university">
+                        <option selected="selected" value="">Lütfen seçiniz</option>
+                        <option value="ABDULLAH GÜL ÜNİVERSİTESİ">ABDULLAH GÜL ÜNİVERSİTESİ</option>
+                        <option value="ACIBADEM MEHMET ALİ AYDINLAR ÜNİVERSİTESİ">ACIBADEM MEHMET ALİ AYDINLAR ÜNİVERSİTESİ</option>
+                        <option value="ADANA ALPARSLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">ADANA ALPARSLAN TÜRKEŞ BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="ADIYAMAN ÜNİVERSİTESİ">ADIYAMAN ÜNİVERSİTESİ</option>
+                        <option value="AFYON KOCATEPE ÜNİVERSİTESİ">AFYON KOCATEPE ÜNİVERSİTESİ</option>
+                        <option value="AFYONKARAHİSAR SAĞLIK BİLİMLERİ ÜNİVERSİTESİ">AFYONKARAHİSAR SAĞLIK BİLİMLERİ ÜNİVERSİTESİ</option>
+                        <option value="AĞRI İBRAHİM ÇEÇEN ÜNİVERSİTESİ">AĞRI İBRAHİM ÇEÇEN ÜNİVERSİTESİ</option>
+                        <option value="AKDENİZ ÜNİVERSİTESİ">AKDENİZ ÜNİVERSİTESİ</option>
+                        <option value="AKSARAY ÜNİVERSİTESİ">AKSARAY ÜNİVERSİTESİ</option>
+                        <option value="ALANYA ALAADDİN KEYKUBAT ÜNİVERSİTESİ">ALANYA ALAADDİN KEYKUBAT ÜNİVERSİTESİ</option>
+                        <option value="ALANYA HAMDULLAH EMİN PAŞA ÜNİVERSİTESİ">ALANYA HAMDULLAH EMİN PAŞA ÜNİVERSİTESİ</option>
+                        <option value="ALTINBAŞ ÜNİVERSİTESİ">ALTINBAŞ ÜNİVERSİTESİ</option>
+                        <option value="AMASYA ÜNİVERSİTESİ">AMASYA ÜNİVERSİTESİ</option>
+                        <option value="ANADOLU ÜNİVERSİTESİ">ANADOLU ÜNİVERSİTESİ</option>
+                        <option value="ANKA TEKNOLOJİ ÜNİVERSİTESİ">ANKA TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="ANKARA BİLİM ÜNİVERSİTESİ">ANKARA BİLİM ÜNİVERSİTESİ</option>
+                        <option value="ANKARA HACI BAYRAM VELİ ÜNİVERSİTESİ">ANKARA HACI BAYRAM VELİ ÜNİVERSİTESİ</option>
+                        <option value="ANKARA MEDİPOL ÜNİVERSİTESİ">ANKARA MEDİPOL ÜNİVERSİTESİ</option>
+                        <option value="ANKARA MÜZİK VE GÜZEL SANATLAR ÜNİVERSİTESİ">ANKARA MÜZİK VE GÜZEL SANATLAR ÜNİVERSİTESİ</option>
+                        <option value="ANKARA SOSYAL BİLİMLER ÜNİVERSİTESİ">ANKARA SOSYAL BİLİMLER ÜNİVERSİTESİ</option>
+                        <option value="ANKARA ÜNİVERSİTESİ">ANKARA ÜNİVERSİTESİ</option>
+                        <option value="ANKARA YILDIRIM BEYAZIT ÜNİVERSİTESİ">ANKARA YILDIRIM BEYAZIT ÜNİVERSİTESİ</option>
+                        <option value="ANTALYA AKEV ÜNİVERSİTESİ">ANTALYA AKEV ÜNİVERSİTESİ</option>
+                        <option value="ANTALYA BİLİM ÜNİVERSİTESİ">ANTALYA BİLİM ÜNİVERSİTESİ</option>
+                        <option value="ARDAHAN ÜNİVERSİTESİ">ARDAHAN ÜNİVERSİTESİ</option>
+                        <option value="ARTVİN ÇORUH ÜNİVERSİTESİ">ARTVİN ÇORUH ÜNİVERSİTESİ</option>
+                        <option value="ATAŞEHİR ADIGÜZEL MESLEK YÜKSEKOKULU">ATAŞEHİR ADIGÜZEL MESLEK YÜKSEKOKULU</option>
+                        <option value="ATATÜRK ÜNİVERSİTESİ">ATATÜRK ÜNİVERSİTESİ</option>
+                        <option value="ATILIM ÜNİVERSİTESİ">ATILIM ÜNİVERSİTESİ</option>
+                        <option value="AVRASYA ÜNİVERSİTESİ">AVRASYA ÜNİVERSİTESİ</option>
+                        <option value="AYDIN ADNAN MENDERES ÜNİVERSİTESİ">AYDIN ADNAN MENDERES ÜNİVERSİTESİ</option>
+                        <option value="BAHÇEŞEHİR ÜNİVERSİTESİ">BAHÇEŞEHİR ÜNİVERSİTESİ</option>
+                        <option value="BALIKESİR ÜNİVERSİTESİ">BALIKESİR ÜNİVERSİTESİ</option>
+                        <option value="BANDIRMA ONYEDİ EYLÜL ÜNİVERSİTESİ">BANDIRMA ONYEDİ EYLÜL ÜNİVERSİTESİ</option>
+                        <option value="BARTIN ÜNİVERSİTESİ">BARTIN ÜNİVERSİTESİ</option>
+                        <option value="BAŞKENT ÜNİVERSİTESİ">BAŞKENT ÜNİVERSİTESİ</option>
+                        <option value="BATMAN ÜNİVERSİTESİ">BATMAN ÜNİVERSİTESİ</option>
+                        <option value="BAYBURT ÜNİVERSİTESİ">BAYBURT ÜNİVERSİTESİ</option>
+                        <option value="BEYKENT ÜNİVERSİTESİ">BEYKENT ÜNİVERSİTESİ</option>
+                        <option value="BEYKOZ ÜNİVERSİTESİ">BEYKOZ ÜNİVERSİTESİ</option>
+                        <option value="BEZM-İ ÂLEM VAKIF ÜNİVERSİTESİ">BEZM-İ ÂLEM VAKIF ÜNİVERSİTESİ</option>
+                        <option value="BİLECİK ŞEYH EDEBALİ ÜNİVERSİTESİ">BİLECİK ŞEYH EDEBALİ ÜNİVERSİTESİ</option>
+                        <option value="BİNGÖL ÜNİVERSİTESİ">BİNGÖL ÜNİVERSİTESİ</option>
+                        <option value="BİRUNİ ÜNİVERSİTESİ">BİRUNİ ÜNİVERSİTESİ</option>
+                        <option value="BİTLİS EREN ÜNİVERSİTESİ">BİTLİS EREN ÜNİVERSİTESİ</option>
+                        <option value="BOĞAZİÇİ ÜNİVERSİTESİ">BOĞAZİÇİ ÜNİVERSİTESİ</option>
+                        <option value="BOLU ABANT İZZET BAYSAL ÜNİVERSİTESİ">BOLU ABANT İZZET BAYSAL ÜNİVERSİTESİ</option>
+                        <option value="BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ">BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ</option>
+                        <option value="BURSA TEKNİK ÜNİVERSİTESİ">BURSA TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="BURSA ULUDAĞ ÜNİVERSİTESİ">BURSA ULUDAĞ ÜNİVERSİTESİ</option>
+                        <option value="ÇAĞ ÜNİVERSİTESİ">ÇAĞ ÜNİVERSİTESİ</option>
+                        <option value="ÇANKAYA ÜNİVERSİTESİ">ÇANKAYA ÜNİVERSİTESİ</option>
+                        <option value="ÇANKIRI KARATEKİN ÜNİVERSİTESİ">ÇANKIRI KARATEKİN ÜNİVERSİTESİ</option>
+                        <option value="ÇUKUROVA ÜNİVERSİTESİ">ÇUKUROVA ÜNİVERSİTESİ</option>
+                        <option value="DEMİROĞLU BİLİM ÜNİVERSİTESİ">DEMİROĞLU BİLİM ÜNİVERSİTESİ</option>
+                        <option value="DİCLE ÜNİVERSİTESİ">DİCLE ÜNİVERSİTESİ</option>
+                        <option value="DOĞUŞ ÜNİVERSİTESİ">DOĞUŞ ÜNİVERSİTESİ</option>
+                        <option value="DOKUZ EYLÜL ÜNİVERSİTESİ">DOKUZ EYLÜL ÜNİVERSİTESİ</option>
+                        <option value="DÜZCE ÜNİVERSİTESİ">DÜZCE ÜNİVERSİTESİ</option>
+                        <option value="EGE ÜNİVERSİTESİ">EGE ÜNİVERSİTESİ</option>
+                        <option value="ERCİYES ÜNİVERSİTESİ">ERCİYES ÜNİVERSİTESİ</option>
+                        <option value="ERZİNCAN BİNALİ YILDIRIM ÜNİVERSİTESİ">ERZİNCAN BİNALİ YILDIRIM ÜNİVERSİTESİ</option>
+                        <option value="ERZURUM TEKNİK ÜNİVERSİTESİ">ERZURUM TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="ESKİŞEHİR OSMANGAZİ ÜNİVERSİTESİ">ESKİŞEHİR OSMANGAZİ ÜNİVERSİTESİ</option>
+                        <option value="ESKİŞEHİR TEKNİK ÜNİVERSİTESİ">ESKİŞEHİR TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="FATİH SULTAN MEHMET VAKIF ÜNİVERSİTESİ">FATİH SULTAN MEHMET VAKIF ÜNİVERSİTESİ</option>
+                        <option value="FENERBAHÇE ÜNİVERSİTESİ">FENERBAHÇE ÜNİVERSİTESİ</option>
+                        <option value="FIRAT ÜNİVERSİTESİ">FIRAT ÜNİVERSİTESİ</option>
+                        <option value="GALATASARAY ÜNİVERSİTESİ">GALATASARAY ÜNİVERSİTESİ</option>
+                        <option value="GAZİ ÜNİVERSİTESİ">GAZİ ÜNİVERSİTESİ</option>
+                        <option value="GAZİANTEP İSLAM BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">GAZİANTEP İSLAM BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="GAZİANTEP ÜNİVERSİTESİ">GAZİANTEP ÜNİVERSİTESİ</option>
+                        <option value="GEBZE TEKNİK ÜNİVERSİTESİ">GEBZE TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="GİRESUN ÜNİVERSİTESİ">GİRESUN ÜNİVERSİTESİ</option>
+                        <option value="GÜMÜŞHANE ÜNİVERSİTESİ">GÜMÜŞHANE ÜNİVERSİTESİ</option>
+                        <option value="HACETTEPE ÜNİVERSİTESİ">HACETTEPE ÜNİVERSİTESİ</option>
+                        <option value="HAKKARİ ÜNİVERSİTESİ">HAKKARİ ÜNİVERSİTESİ</option>
+                        <option value="HALİÇ ÜNİVERSİTESİ">HALİÇ ÜNİVERSİTESİ</option>
+                        <option value="HARRAN ÜNİVERSİTESİ">HARRAN ÜNİVERSİTESİ</option>
+                        <option value="HASAN KALYONCU ÜNİVERSİTESİ">HASAN KALYONCU ÜNİVERSİTESİ</option>
+                        <option value="HATAY MUSTAFA KEMAL ÜNİVERSİTESİ">HATAY MUSTAFA KEMAL ÜNİVERSİTESİ</option>
+                        <option value="HİTİT ÜNİVERSİTESİ">HİTİT ÜNİVERSİTESİ</option>
+                        <option value="IĞDIR ÜNİVERSİTESİ">IĞDIR ÜNİVERSİTESİ</option>
+                        <option value="ISPARTA UYGULAMALI BİLİMLER ÜNİVERSİTESİ">ISPARTA UYGULAMALI BİLİMLER ÜNİVERSİTESİ</option>
+                        <option value="IŞIK ÜNİVERSİTESİ">IŞIK ÜNİVERSİTESİ</option>
+                        <option value="İBN HALDUN ÜNİVERSİTESİ">İBN HALDUN ÜNİVERSİTESİ</option>
+                        <option value="İHSAN DOĞRAMACI BİLKENT ÜNİVERSİTESİ">İHSAN DOĞRAMACI BİLKENT ÜNİVERSİTESİ</option>
+                        <option value="İNÖNÜ ÜNİVERSİTESİ">İNÖNÜ ÜNİVERSİTESİ</option>
+                        <option value="İSKENDERUN TEKNİK ÜNİVERSİTESİ">İSKENDERUN TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL AREL ÜNİVERSİTESİ">İSTANBUL AREL ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL ATLAS ÜNİVERSİTESİ">İSTANBUL ATLAS ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL AYDIN ÜNİVERSİTESİ">İSTANBUL AYDIN ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL BİLGİ ÜNİVERSİTESİ">İSTANBUL BİLGİ ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL ESENYURT ÜNİVERSİTESİ">İSTANBUL ESENYURT ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL GALATA ÜNİVERSİTESİ">İSTANBUL GALATA ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL GEDİK ÜNİVERSİTESİ">İSTANBUL GEDİK ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL GELİŞİM ÜNİVERSİTESİ">İSTANBUL GELİŞİM ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL KENT ÜNİVERSİTESİ">İSTANBUL KENT ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL KÜLTÜR ÜNİVERSİTESİ">İSTANBUL KÜLTÜR ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL MEDENİYET ÜNİVERSİTESİ">İSTANBUL MEDENİYET ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL MEDİPOL ÜNİVERSİTESİ">İSTANBUL MEDİPOL ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL OKAN ÜNİVERSİTESİ">İSTANBUL OKAN ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL RUMELİ ÜNİVERSİTESİ">İSTANBUL RUMELİ ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL SABAHATTİN ZAİM ÜNİVERSİTESİ">İSTANBUL SABAHATTİN ZAİM ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL SAĞLIK VE SOSYAL BİLİMLER MESLEK YÜKSEKOKULU">İSTANBUL SAĞLIK VE SOSYAL BİLİMLER MESLEK YÜKSEKOKULU</option>
+                        <option value="İSTANBUL SAĞLIK VE TEKNOLOJİ ÜNİVERSİTESİ">İSTANBUL SAĞLIK VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL ŞİŞLİ MESLEK YÜKSEKOKULU">İSTANBUL ŞİŞLİ MESLEK YÜKSEKOKULU</option>
+                        <option value="İSTANBUL TEKNİK ÜNİVERSİTESİ">İSTANBUL TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL TİCARET ÜNİVERSİTESİ">İSTANBUL TİCARET ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL TOPKAPI ÜNİVERSİTESİ">İSTANBUL TOPKAPI ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL ÜNİVERSİTESİ">İSTANBUL ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL ÜNİVERSİTESİ-CERRAHPAŞA">İSTANBUL ÜNİVERSİTESİ-CERRAHPAŞA</option>
+                        <option value="İSTANBUL YENİ YÜZYIL ÜNİVERSİTESİ">İSTANBUL YENİ YÜZYIL ÜNİVERSİTESİ</option>
+                        <option value="İSTANBUL 29 MAYIS ÜNİVERSİTESİ">İSTANBUL 29 MAYIS ÜNİVERSİTESİ</option>
+                        <option value="İSTİNYE ÜNİVERSİTESİ">İSTİNYE ÜNİVERSİTESİ</option>
+                        <option value="İZMİR BAKIRÇAY ÜNİVERSİTESİ">İZMİR BAKIRÇAY ÜNİVERSİTESİ</option>
+                        <option value="İZMİR DEMOKRASİ ÜNİVERSİTESİ">İZMİR DEMOKRASİ ÜNİVERSİTESİ</option>
+                        <option value="İZMİR EKONOMİ ÜNİVERSİTESİ">İZMİR EKONOMİ ÜNİVERSİTESİ</option>
+                        <option value="İZMİR KATİP ÇELEBİ ÜNİVERSİTESİ">İZMİR KATİP ÇELEBİ ÜNİVERSİTESİ</option>
+                        <option value="İZMİR KAVRAM MESLEK YÜKSEKOKULU">İZMİR KAVRAM MESLEK YÜKSEKOKULU</option>
+                        <option value="İZMİR TINAZTEPE ÜNİVERSİTESİ">İZMİR TINAZTEPE ÜNİVERSİTESİ</option>
+                        <option value="İZMİR YÜKSEK TEKNOLOJİ ENSTİTÜSÜ">İZMİR YÜKSEK TEKNOLOJİ ENSTİTÜSÜ</option>
+                        <option value="KADİR HAS ÜNİVERSİTESİ">KADİR HAS ÜNİVERSİTESİ</option>
+                        <option value="KAFKAS ÜNİVERSİTESİ">KAFKAS ÜNİVERSİTESİ</option>
+                        <option value="KAHRAMANMARAŞ İSTİKLAL ÜNİVERSİTESİ">KAHRAMANMARAŞ İSTİKLAL ÜNİVERSİTESİ</option>
+                        <option value="KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ">KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ</option>
+                        <option value="KAPADOKYA ÜNİVERSİTESİ">KAPADOKYA ÜNİVERSİTESİ</option>
+                        <option value="KARABÜK ÜNİVERSİTESİ">KARABÜK ÜNİVERSİTESİ</option>
+                        <option value="KARADENİZ TEKNİK ÜNİVERSİTESİ">KARADENİZ TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ">KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ</option>
+                        <option value="KASTAMONU ÜNİVERSİTESİ">KASTAMONU ÜNİVERSİTESİ</option>
+                        <option value="KAYSERİ ÜNİVERSİTESİ">KAYSERİ ÜNİVERSİTESİ</option>
+                        <option value="KIRIKKALE ÜNİVERSİTESİ">KIRIKKALE ÜNİVERSİTESİ</option>
+                        <option value="KIRKLARELİ ÜNİVERSİTESİ">KIRKLARELİ ÜNİVERSİTESİ</option>
+                        <option value="KIRŞEHİR AHİ EVRAN ÜNİVERSİTESİ">KIRŞEHİR AHİ EVRAN ÜNİVERSİTESİ</option>
+                        <option value="KİLİS 7 ARALIK ÜNİVERSİTESİ">KİLİS 7 ARALIK ÜNİVERSİTESİ</option>
+                        <option value="KOCAELİ SAĞLIK VE TEKNOLOJİ ÜNİVERSİTESİ">KOCAELİ SAĞLIK VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="KOCAELİ ÜNİVERSİTESİ">KOCAELİ ÜNİVERSİTESİ</option>
+                        <option value="KOÇ ÜNİVERSİTESİ">KOÇ ÜNİVERSİTESİ</option>
+                        <option value="KONYA GIDA VE TARIM ÜNİVERSİTESİ">KONYA GIDA VE TARIM ÜNİVERSİTESİ</option>
+                        <option value="KONYA TEKNİK ÜNİVERSİTESİ">KONYA TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="KTO KARATAY ÜNİVERSİTESİ">KTO KARATAY ÜNİVERSİTESİ</option>
+                        <option value="KÜTAHYA DUMLUPINAR ÜNİVERSİTESİ">KÜTAHYA DUMLUPINAR ÜNİVERSİTESİ</option>
+                        <option value="KÜTAHYA SAĞLIK BİLİMLERİ ÜNİVERSİTESİ">KÜTAHYA SAĞLIK BİLİMLERİ ÜNİVERSİTESİ</option>
+                        <option value="LOKMAN HEKİM ÜNİVERSİTESİ">LOKMAN HEKİM ÜNİVERSİTESİ</option>
+                        <option value="MALATYA TURGUT ÖZAL ÜNİVERSİTESİ">MALATYA TURGUT ÖZAL ÜNİVERSİTESİ</option>
+                        <option value="MALTEPE ÜNİVERSİTESİ">MALTEPE ÜNİVERSİTESİ</option>
+                        <option value="MANİSA CELÂL BAYAR ÜNİVERSİTESİ">MANİSA CELÂL BAYAR ÜNİVERSİTESİ</option>
+                        <option value="MARDİN ARTUKLU ÜNİVERSİTESİ">MARDİN ARTUKLU ÜNİVERSİTESİ</option>
+                        <option value="MARMARA ÜNİVERSİTESİ">MARMARA ÜNİVERSİTESİ</option>
+                        <option value="MEF ÜNİVERSİTESİ">MEF ÜNİVERSİTESİ</option>
+                        <option value="MERSİN ÜNİVERSİTESİ">MERSİN ÜNİVERSİTESİ</option>
+                        <option value="MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ">MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ</option>
+                        <option value="MUDANYA ÜNİVERSİTESİ">MUDANYA ÜNİVERSİTESİ</option>
+                        <option value="MUĞLA SITKI KOÇMAN ÜNİVERSİTESİ">MUĞLA SITKI KOÇMAN ÜNİVERSİTESİ</option>
+                        <option value="MUNZUR ÜNİVERSİTESİ">MUNZUR ÜNİVERSİTESİ</option>
+                        <option value="MUŞ ALPARSLAN ÜNİVERSİTESİ">MUŞ ALPARSLAN ÜNİVERSİTESİ</option>
+                        <option value="NECMETTİN ERBAKAN ÜNİVERSİTESİ">NECMETTİN ERBAKAN ÜNİVERSİTESİ</option>
+                        <option value="NEVŞEHİR HACI BEKTAŞ VELİ ÜNİVERSİTESİ">NEVŞEHİR HACI BEKTAŞ VELİ ÜNİVERSİTESİ</option>
+                        <option value="NİĞDE ÖMER HALİSDEMİR ÜNİVERSİTESİ">NİĞDE ÖMER HALİSDEMİR ÜNİVERSİTESİ</option>
+                        <option value="NİŞANTAŞI ÜNİVERSİTESİ">NİŞANTAŞI ÜNİVERSİTESİ</option>
+                        <option value="NUH NACİ YAZGAN ÜNİVERSİTESİ">NUH NACİ YAZGAN ÜNİVERSİTESİ</option>
+                        <option value="ONDOKUZ MAYIS ÜNİVERSİTESİ">ONDOKUZ MAYIS ÜNİVERSİTESİ</option>
+                        <option value="ORDU ÜNİVERSİTESİ">ORDU ÜNİVERSİTESİ</option>
+                        <option value="ORTA DOĞU TEKNİK ÜNİVERSİTESİ">ORTA DOĞU TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="OSMANİYE KORKUT ATA ÜNİVERSİTESİ">OSMANİYE KORKUT ATA ÜNİVERSİTESİ</option>
+                        <option value="OSTİM TEKNİK ÜNİVERSİTESİ">OSTİM TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="ÖZYEĞİN ÜNİVERSİTESİ">ÖZYEĞİN ÜNİVERSİTESİ</option>
+                        <option value="PAMUKKALE ÜNİVERSİTESİ">PAMUKKALE ÜNİVERSİTESİ</option>
+                        <option value="PİRİ REİS ÜNİVERSİTESİ">PİRİ REİS ÜNİVERSİTESİ</option>
+                        <option value="RECEP TAYYİP ERDOĞAN ÜNİVERSİTESİ">RECEP TAYYİP ERDOĞAN ÜNİVERSİTESİ</option>
+                        <option value="SABANCI ÜNİVERSİTESİ">SABANCI ÜNİVERSİTESİ</option>
+                        <option value="SAĞLIK BİLİMLERİ ÜNİVERSİTESİ">SAĞLIK BİLİMLERİ ÜNİVERSİTESİ</option>
+                        <option value="SAKARYA UYGULAMALI BİLİMLER ÜNİVERSİTESİ">SAKARYA UYGULAMALI BİLİMLER ÜNİVERSİTESİ</option>
+                        <option value="SAKARYA ÜNİVERSİTESİ">SAKARYA ÜNİVERSİTESİ</option>
+                        <option value="SAMSUN ÜNİVERSİTESİ">SAMSUN ÜNİVERSİTESİ</option>
+                        <option value="SANKO ÜNİVERSİTESİ">SANKO ÜNİVERSİTESİ</option>
+                        <option value="SELÇUK ÜNİVERSİTESİ">SELÇUK ÜNİVERSİTESİ</option>
+                        <option value="SİİRT ÜNİVERSİTESİ">SİİRT ÜNİVERSİTESİ</option>
+                        <option value="SİNOP ÜNİVERSİTESİ">SİNOP ÜNİVERSİTESİ</option>
+                        <option value="SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="SİVAS CUMHURİYET ÜNİVERSİTESİ">SİVAS CUMHURİYET ÜNİVERSİTESİ</option>
+                        <option value="SÜLEYMAN DEMİREL ÜNİVERSİTESİ">SÜLEYMAN DEMİREL ÜNİVERSİTESİ</option>
+                        <option value="ŞIRNAK ÜNİVERSİTESİ">ŞIRNAK ÜNİVERSİTESİ</option>
+                        <option value="TARSUS ÜNİVERSİTESİ">TARSUS ÜNİVERSİTESİ</option>
+                        <option value="TED ÜNİVERSİTESİ">TED ÜNİVERSİTESİ</option>
+                        <option value="TEKİRDAĞ NAMIK KEMAL ÜNİVERSİTESİ">TEKİRDAĞ NAMIK KEMAL ÜNİVERSİTESİ</option>
+                        <option value="TOBB EKONOMİ VE TEKNOLOJİ ÜNİVERSİTESİ">TOBB EKONOMİ VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="TOKAT GAZİOSMANPAŞA ÜNİVERSİTESİ">TOKAT GAZİOSMANPAŞA ÜNİVERSİTESİ</option>
+                        <option value="TOROS ÜNİVERSİTESİ">TOROS ÜNİVERSİTESİ</option>
+                        <option value="TRABZON ÜNİVERSİTESİ">TRABZON ÜNİVERSİTESİ</option>
+                        <option value="TRAKYA ÜNİVERSİTESİ">TRAKYA ÜNİVERSİTESİ</option>
+                        <option value="TÜRK HAVA KURUMU ÜNİVERSİTESİ">TÜRK HAVA KURUMU ÜNİVERSİTESİ</option>
+                        <option value="TÜRK-ALMAN ÜNİVERSİTESİ">TÜRK-ALMAN ÜNİVERSİTESİ</option>
+                        <option value="TÜRKİYE ULUSLARARASI İSLAM, BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">TÜRKİYE ULUSLARARASI İSLAM, BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="TÜRK-JAPON BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">TÜRK-JAPON BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</option>
+                        <option value="UFUK ÜNİVERSİTESİ">UFUK ÜNİVERSİTESİ</option>
+                        <option value="UŞAK ÜNİVERSİTESİ">UŞAK ÜNİVERSİTESİ</option>
+                        <option value="ÜSKÜDAR ÜNİVERSİTESİ">ÜSKÜDAR ÜNİVERSİTESİ</option>
+                        <option value="VAN YÜZÜNCÜ YIL ÜNİVERSİTESİ">VAN YÜZÜNCÜ YIL ÜNİVERSİTESİ</option>
+                        <option value="YALOVA ÜNİVERSİTESİ">YALOVA ÜNİVERSİTESİ</option>
+                        <option value="YAŞAR ÜNİVERSİTESİ">YAŞAR ÜNİVERSİTESİ</option>
+                        <option value="YEDİTEPE ÜNİVERSİTESİ">YEDİTEPE ÜNİVERSİTESİ</option>
+                        <option value="YILDIZ TEKNİK ÜNİVERSİTESİ">YILDIZ TEKNİK ÜNİVERSİTESİ</option>
+                        <option value="YOZGAT BOZOK ÜNİVERSİTESİ">YOZGAT BOZOK ÜNİVERSİTESİ</option>
+                        <option value="YÜKSEK İHTİSAS ÜNİVERSİTESİ">YÜKSEK İHTİSAS ÜNİVERSİTESİ</option>
+                        <option value="ZONGULDAK BÜLENT ECEVİT ÜNİVERSİTESİ">ZONGULDAK BÜLENT ECEVİT ÜNİVERSİTESİ</option>
+                        <option value="Diğer">Diğer</option>
+                    </select>
+                </div>
+                <div class="form-group col-6 university">
+                    <label>Okul Enum</label>
+                    <select class="form-control university" asp-items="Html.GetEnumSelectList<University>()" >
+                        <option selected="selected" value="">Lütfen seçiniz</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
