@@ -1,4 +1,4 @@
-# TurkishUniversity - Türkiye Üniversite Listesi YÖK 01.01.2023
+# TurkishUniversities - Türkiye Üniversite Listesi YÖK 01.01.2023
 
 liste: select ve enum olarak paylaşıldı.
 
